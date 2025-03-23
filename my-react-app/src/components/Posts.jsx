@@ -10,7 +10,7 @@ const Posts = () => {
         // Fetch data from the API
         const response = await fetch("https://jsonplaceholder.typicode.com/posts");
 
-        // Check if the response is OK
+        // Checks if the response is ok
         if (!response.ok) {
           throw new Error("Failed to fetch posts. Please try again later.");
         }
@@ -26,7 +26,7 @@ const Posts = () => {
     fetchPosts(); // Call the fetch function
   }, []);
 
-  // Render error message if there's an error
+  // Render error message if there is an error
   if (error) {
     return <div>Error: {error}</div>;
   }
